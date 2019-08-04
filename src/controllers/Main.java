@@ -10,11 +10,10 @@ import javafx.scene.layout.BorderPane;
 import util.ErrorMessages;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class main implements Initializable {
+public class Main implements Initializable {
 
     @FXML
     private ImageView logo;
