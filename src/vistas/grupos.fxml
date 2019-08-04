@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+<AnchorPane prefHeight="570.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GruposController">
+   <children>
+      <ComboBox id="comboGrupos" fx:id="comboBoxGrupos" layoutX="29.0" layoutY="22.0" prefWidth="150.0" promptText="Grupos" />
+      <Separator layoutX="29.0" layoutY="60.0" prefHeight="5.0" prefWidth="749.0" />
+      <TableView fx:id="tablaGrupo" layoutX="100.0" layoutY="85.0" prefHeight="150.0" prefWidth="600.0">
+        <columns>
+            <TableColumn fx:id="banderaCol" />
+          <TableColumn fx:id="equipoCol" maxWidth="200.0" prefWidth="200.0" text="Equipo" />
+          <TableColumn fx:id="puntosCol" minWidth="0.0" text="Puntos" />
+            <TableColumn fx:id="jugadosCol" minWidth="0.0" text="Jugados" />
+            <TableColumn fx:id="golesFavorCol" text="GF" />
+            <TableColumn fx:id="golesContraCol" text="GC" />
+        </columns>
+      </TableView>
+      <FlowPane fx:id="panelPartidos" alignment="TOP_CENTER" layoutX="29.0" layoutY="270.0" prefHeight="270.0" prefWidth="749.0" />
+   </children>
+</AnchorPane>
