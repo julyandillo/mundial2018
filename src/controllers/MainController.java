@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Main implements Initializable {
+public class MainController implements Initializable {
 
     @FXML
     private ImageView logo;

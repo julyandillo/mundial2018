@@ -1,6 +1,8 @@
 package controllers;
 
 import clases.Equipo;
+import dao.DAOManager;
+import dao.exception.DAOException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,6 +14,7 @@ import util.ErrorMessages;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class GruposController implements Initializable {
@@ -43,14 +46,14 @@ public class GruposController implements Initializable {
     }
 
     private void cargarGrupo(char grupo) {
-        /*
+
         try {
-            ArrayList<Equipo> equipos = DAOManager.getGrupoDAO().getGrupo(grupo);
+            List<Equipo> equipos = DAOManager.getGrupoDAO().getGrupo(grupo);
             tablaGrupo.setVisible(true);
         } catch (DAOException ex) {
             ErrorMessages.mostrar(Alert.AlertType.ERROR, ex.getMensaje());
         }
-        */
+
         tablaGrupo.setVisible(true);
         try {
             for(int i=0; i<8; i++) {
@@ -63,7 +66,8 @@ public class GruposController implements Initializable {
             }
 
         } catch (IOException ex) {
-            ErrorMessages.mostrar(Alert.AlertType.ERROR, "No se pueden cargar los partidos del grupo.\n" + ex.getMessage());
+            ErrorMessages.mostrar(Alert.AlertType.ERROR, "No se pueden cargar los partidos del grupo.\n" +
+                    ex.getMessage());
         }
     }
 }

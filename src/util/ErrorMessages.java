@@ -6,13 +6,17 @@ public class ErrorMessages {
 
     private static Alert mensaje = null;
 
+    /**
+     * Añadiendo un constructor privado, se evita que java cree uno publico por defecto al no encontrar
+     * ninguno definido en la clase
+     */
     private ErrorMessages() {
-        mensaje = new Alert(Alert.AlertType.NONE);
+        throw new IllegalStateException("Esta clase no se puede instanciar");
     }
 
     public static Alert mostrar(Alert.AlertType tipo, String texto) {
         if (mensaje == null) {
-            new ErrorMessages();
+            mensaje = new Alert(Alert.AlertType.NONE);
         }
 
         mensaje.setTitle("Mundial Rusia 2018");
